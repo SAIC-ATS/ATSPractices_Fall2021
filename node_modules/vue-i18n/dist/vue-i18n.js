@@ -1,5 +1,5 @@
 /*!
- * vue-i18n v8.22.4 
+ * vue-i18n v8.24.3 
  * (c) 2021 kazuya kawaguchi
  * Released under the MIT License.
  */
@@ -117,11 +117,8 @@
   }
 
   function remove (arr, item) {
-    if (arr.length) {
-      var index = arr.indexOf(item);
-      if (index > -1) {
-        return arr.splice(index, 1)
-      }
+    if (arr.delete(item)) {
+      return arr
     }
   }
 
@@ -310,6 +307,16 @@
             options.i18n.silentFallbackWarn = rootI18n.silentFallbackWarn;
             options.i18n.pluralizationRules = rootI18n.pluralizationRules;
             options.i18n.preserveDirectiveContent = rootI18n.preserveDirectiveContent;
+            this.$root.$once('hook:beforeDestroy', function () {
+              options.i18n.root = null;
+              options.i18n.formatter = null;
+              options.i18n.fallbackLocale = null;
+              options.i18n.formatFallbackMessages = null;
+              options.i18n.silentTranslationWarn = null;
+              options.i18n.silentFallbackWarn = null;
+              options.i18n.pluralizationRules = null;
+              options.i18n.preserveDirectiveContent = null;
+            });
           }
 
           // init locale messages via custom blocks
@@ -380,6 +387,12 @@
       } else if (options.parent && options.parent.$i18n && options.parent.$i18n instanceof VueI18n) {
         this._i18n.subscribeDataChanging(this);
         this._subscribing = true;
+      }
+    },
+
+    mounted: function mounted () {
+      if (this !== this.$root && this.$options.__INTLIFY_META__ && this.$el) {
+        this.$el.setAttribute('data-intlify', this.$options.__INTLIFY_META__);
       }
     },
 
@@ -1134,7 +1147,7 @@
       var i = 0;
       while (i < length) {
         var value = last[paths[i]];
-        if (value === undefined) {
+        if (value === undefined || value === null) {
           return null
         }
         last = value;
@@ -1202,7 +1215,7 @@
     this._dateTimeFormatters = {};
     this._numberFormatters = {};
     this._path = new I18nPath();
-    this._dataListeners = [];
+    this._dataListeners = new Set();
     this._componentInstanceCreatedListener = options.componentInstanceCreatedListener || null;
     this._preserveDirectiveContent = options.preserveDirectiveContent === undefined
       ? false
@@ -1333,7 +1346,7 @@
   };
 
   VueI18n.prototype.subscribeDataChanging = function subscribeDataChanging (vm) {
-    this._dataListeners.push(vm);
+    this._dataListeners.add(vm);
   };
 
   VueI18n.prototype.unsubscribeDataChanging = function unsubscribeDataChanging (vm) {
@@ -1343,12 +1356,11 @@
   VueI18n.prototype.watchI18nData = function watchI18nData () {
     var self = this;
     return this._vm.$watch('$data', function () {
-      var i = self._dataListeners.length;
-      while (i--) {
+      self._dataListeners.forEach(function (e) {
         Vue.nextTick(function () {
-          self._dataListeners[i] && self._dataListeners[i].$forceUpdate();
+          e && e.$forceUpdate();
         });
-      }
+      });
     }, { deep: true })
   };
 
@@ -2197,7 +2209,7 @@
   });
 
   VueI18n.install = install;
-  VueI18n.version = '8.22.4';
+  VueI18n.version = '8.24.3';
 
   return VueI18n;
 

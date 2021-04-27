@@ -1,5 +1,5 @@
 {
-  "name": "spring2021",
+  "name": "ats_practices_spring21",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
@@ -11,10 +11,11 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "@nuxt/content-theme-docs": "^0.8.0",
+    "@nuxt/content-theme-docs": "^0.10.2",
     "cookie": "^0.4.0",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.14.7",
+    "nuxt": "^2.15.4",
+    "nuxt-password-protect": "*",
     "push-dir": "^0.4.1",
     "underscore": "^1.12.0"
   },

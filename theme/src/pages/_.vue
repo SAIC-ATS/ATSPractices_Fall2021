@@ -23,7 +23,7 @@ export default {
   },
   middleware({ app, params, redirect }) {
     if (params.pathMatch === "index") {
-      redirect(app.localePath("/"));
+      redirect(app.localePath("ATSPractices_Spring2021/"));
     }
   },
   data: function () {

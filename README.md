@@ -1,4 +1,4 @@
-# Static Site for SAIC Spring 21 Art & Technology Practices
+# kristin
 
 ## Setup
 
