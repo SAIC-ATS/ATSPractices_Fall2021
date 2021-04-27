@@ -1,6 +1,5 @@
-import { stringify } from 'querystring'
 import Vue from 'vue'
-import { normalizeURL } from '@nuxt/ufo'
+import { joinURL, normalizeURL, withQuery } from 'ufo'
 import fetch from 'node-fetch'
 import middleware from './middleware.js'
 import {
@@ -29,11 +28,7 @@ Vue.component('NLink', NuxtLink)
 
 if (!global.fetch) { global.fetch = fetch }
 
-const noopApp = () => new Vue({ render: h => h('div') })
-
-function urlJoin () {
-  return Array.prototype.slice.call(arguments).join('/').replace(/\/+/g, '/')
-}
+const noopApp = () => new Vue({ render: h => h('div', { domProps: { id: '__nuxt' } }) })
 
 const createNext = ssrContext => (opts) => {
   // If static target, render on client-side
@@ -42,19 +37,19 @@ const createNext = ssrContext => (opts) => {
     ssrContext.nuxt.serverRendered = false
     return
   }
-  opts.query = stringify(opts.query)
-  opts.path = opts.path + (opts.query ? '?' + opts.query : '')
-  const routerBase = '/'
-  if (!opts.path.startsWith('http') && (routerBase !== '/' && !opts.path.startsWith(routerBase))) {
-    opts.path = urlJoin(routerBase, opts.path)
+  let fullPath = withQuery(opts.path, opts.query)
+  const $config = ssrContext.runtimeConfig || {}
+  const routerBase = ($config._app && $config._app.basePath) || '/'
+  if (!fullPath.startsWith('http') && (routerBase !== '/' && !fullPath.startsWith(routerBase))) {
+    fullPath = joinURL(routerBase, fullPath)
   }
   // Avoid loop redirect
-  if (decodeURI(opts.path) === decodeURI(ssrContext.url)) {
+  if (decodeURI(fullPath) === decodeURI(ssrContext.url)) {
     ssrContext.redirected = false
     return
   }
   ssrContext.res.writeHead(opts.status, {
-    Location: normalizeURL(opts.path)
+    Location: normalizeURL(fullPath)
   })
   ssrContext.res.end()
 }
@@ -71,15 +66,23 @@ export default async (ssrContext) => {
   // Used for beforeNuxtRender({ Components, nuxtState })
   ssrContext.beforeRenderFns = []
   // Nuxt object (window.{{globals.context}}, defaults to window.__NUXT__)
-  ssrContext.nuxt = { layout: 'default', data: [], fetch: [], error: null, state: null, serverRendered: true, routePath: '' }
+  ssrContext.nuxt = { layout: 'default', data: [], fetch: {}, error: null, state: null, serverRendered: true, routePath: '' }
+
+    ssrContext.fetchCounters = {}
+
   // Remove query from url is static target
-  if (process.static && ssrContext.url) {
+
+  if (ssrContext.url) {
     ssrContext.url = ssrContext.url.split('?')[0]
   }
+
   // Public runtime config
   ssrContext.nuxt.config = ssrContext.runtimeConfig.public
+  if (ssrContext.nuxt.config._app) {
+    __webpack_public_path__ = joinURL(ssrContext.nuxt.config._app.cdnURL, ssrContext.nuxt.config._app.assetsPath)
+  }
   // Create the app definition and the instance (created for each request)
-  const { app, router, store } = await createApp(ssrContext, { ...ssrContext.runtimeConfig.public, ...ssrContext.runtimeConfig.private })
+  const { app, router, store } = await createApp(ssrContext, ssrContext.runtimeConfig.private)
   const _app = new Vue(app)
   // Add ssr route path to nuxt context so we can account for page navigation between ssr and csr
   ssrContext.nuxt.routePath = app.context.route.path
@@ -97,6 +100,9 @@ export default async (ssrContext) => {
     ssrContext.rendered = () => {
       // Add the state from the vuex store
       ssrContext.nuxt.state = store.state
+
+      // Stop recording store mutations
+      ssrContext.unsetMutationObserver()
     }
   }
 
@@ -121,10 +127,8 @@ export default async (ssrContext) => {
     return renderErrorPage()
   }
 
-  const s = Date.now()
-
   // Components are already resolved by setContext -> getRouteData (app/utils.js)
-  const Components = getMatchedComponents(router.match(ssrContext.url))
+  const Components = getMatchedComponents(app.context.route)
 
   /*
   ** Dispatch store nuxtServerInit
@@ -166,6 +170,10 @@ export default async (ssrContext) => {
   if (ssrContext.nuxt.error) {
     return renderErrorPage()
   }
+
+  // Record store mutations for full-static after nuxtServerInit and Middleware
+  ssrContext.nuxt.mutations =[]
+  ssrContext.unsetMutationObserver = store.subscribe(m => { ssrContext.nuxt.mutations.push([m.type, m.payload]) })
 
   /*
   ** Set layout
@@ -276,8 +284,6 @@ export default async (ssrContext) => {
 
     return Promise.all(promises)
   }))
-
-  if (process.env.DEBUG && asyncDatas.length) console.debug('Data fetching ' + ssrContext.url + ': ' + (Date.now() - s) + 'ms')
 
   // datas are the first row of each
   ssrContext.nuxt.data = asyncDatas.map(r => r[0] || {})

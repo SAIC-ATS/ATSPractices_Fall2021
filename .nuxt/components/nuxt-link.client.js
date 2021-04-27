@@ -17,7 +17,7 @@ const cancelIdleCallback = window.cancelIdleCallback || function (id) {
 
 const observer = window.IntersectionObserver && new window.IntersectionObserver((entries) => {
   entries.forEach(({ intersectionRatio, target: link }) => {
-    if (intersectionRatio <= 0) {
+    if (intersectionRatio <= 0 || !link.__prefetch) {
       return
     }
     link.__prefetch()
@@ -64,7 +64,10 @@ export default {
       }
     },
     shouldPrefetch () {
-      return this.getPrefetchComponents().length > 0
+      const ref = this.$router.resolve(this.to, this.$route, this.append)
+      const Components = ref.resolved.matched.map(r => r.components.default)
+
+      return Components.filter(Component => ref.href || (typeof Component === 'function' && !Component.options && !Component.__prefetched)).length
     },
     canPrefetch () {
       const conn = navigator.connection
@@ -92,6 +95,13 @@ export default {
           componentOrPromise.catch(() => {})
         }
         Component.__prefetched = true
+      }
+
+      // Preload the data only if not in preview mode
+      if (!this.$root.isPreview) {
+        const { href } = this.$router.resolve(this.to, this.$route, this.append)
+        if (this.$nuxt)
+          this.$nuxt.fetchPayload(href, true).catch(() => {})
       }
     }
   }
