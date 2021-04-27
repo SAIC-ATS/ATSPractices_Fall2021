@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import { nuxtI18nHead, nuxtI18nSeo } from './head-meta'
+import { nuxtI18nSeo } from './seo-head'
 import {
   baseUrl,
   beforeLanguageSwitch,
@@ -18,7 +18,6 @@ import {
   onLanguageSwitched,
   rootRedirect,
   routesNameSeparator,
-  skipSettingLocaleOnNavigate,
   STRATEGIES,
   strategy,
   vueI18n,
@@ -190,38 +189,15 @@ export default async (context) => {
       return [302, storedRedirect]
     }
 
-    const options = { differentDomains, locales, localeDomainKey: LOCALE_DOMAIN_KEY, localeCodeKey: LOCALE_CODE_KEY, moduleName: MODULE_NAME }
-    app.i18n.__baseUrl = resolveBaseUrl(baseUrl, context, app.i18n.locale, options)
+    app.i18n.__baseUrl = resolveBaseUrl(baseUrl, context)
 
     const finalLocale =
       (detectBrowserLanguage && doDetectBrowserLanguage(route)) ||
       getLocaleFromRoute(route) || app.i18n.locale || app.i18n.defaultLocale || ''
 
-    if (skipSettingLocaleOnNavigate) {
-      app.i18n.__pendingLocale = finalLocale
-      app.i18n.__pendingLocalePromise = new Promise(resolve => {
-        app.i18n.__resolvePendingLocalePromise = resolve
-      })
-    } else {
-      await app.i18n.setLocale(finalLocale)
-    }
+    await app.i18n.setLocale(finalLocale)
 
     return [null, null]
-  }
-
-  const finalizePendingLocaleChange = async () => {
-    if (!app.i18n.__pendingLocale) {
-      return
-    }
-    await app.i18n.setLocale(app.i18n.__pendingLocale)
-    app.i18n.__resolvePendingLocalePromise()
-    app.i18n.__pendingLocale = null
-  }
-
-  const waitForPendingLocaleChange = async () => {
-    if (app.i18n.__pendingLocale) {
-      await app.i18n.__pendingLocalePromise
-    }
   }
 
   const getBrowserLocale = () => {
@@ -276,7 +252,6 @@ export default async (context) => {
 
   const extendVueI18nInstance = i18n => {
     i18n.locales = locales
-    i18n.localeProperties = klona(locales.find(l => l[LOCALE_CODE_KEY] === i18n.locale) || { code: i18n.locale })
     i18n.defaultLocale = defaultLocale
     i18n.differentDomains = differentDomains
     i18n.beforeLanguageSwitch = beforeLanguageSwitch
@@ -285,12 +260,7 @@ export default async (context) => {
     i18n.getLocaleCookie = () => getLocaleCookie(req, { useCookie, cookieKey, localeCodes })
     i18n.setLocale = (locale) => loadAndSetLocale(locale)
     i18n.getBrowserLocale = () => getBrowserLocale()
-    i18n.finalizePendingLocaleChange = finalizePendingLocaleChange
-    i18n.waitForPendingLocaleChange = waitForPendingLocaleChange
     i18n.__baseUrl = app.i18n.__baseUrl
-    i18n.__pendingLocale = app.i18n.__pendingLocale
-    i18n.__pendingLocalePromise = app.i18n.__pendingLocalePromise
-    i18n.__resolvePendingLocalePromise = app.i18n.__resolvePendingLocalePromise
   }
 
   // Set instance options
@@ -302,12 +272,11 @@ export default async (context) => {
   app.i18n.localeProperties = { code: '' }
   app.i18n.fallbackLocale = vueI18nOptions.fallbackLocale || ''
   extendVueI18nInstance(app.i18n)
-  const options = { differentDomains, locales, localeDomainKey: LOCALE_DOMAIN_KEY, localeCodeKey: LOCALE_CODE_KEY, moduleName: MODULE_NAME }
-  app.i18n.__baseUrl = resolveBaseUrl(baseUrl, context, '', options)
+  app.i18n.__baseUrl = resolveBaseUrl(baseUrl, context)
   app.i18n.__onNavigate = onNavigate
 
+  // Inject seo function
   Vue.prototype.$nuxtI18nSeo = nuxtI18nSeo
-  Vue.prototype.$nuxtI18nHead = nuxtI18nHead
 
   if (store) {
     // Inject in store.
@@ -326,7 +295,7 @@ export default async (context) => {
     if (vuex && vuex.syncLocale && store && store.state[vuex.moduleName].locale !== '') {
       finalLocale = store.state[vuex.moduleName].locale
     } else if (app.i18n.differentDomains) {
-      const options = { localeDomainKey: LOCALE_DOMAIN_KEY, localeCodeKey: LOCALE_CODE_KEY }
+      const options = { localDomainKey: LOCALE_DOMAIN_KEY, localeCodeKey: LOCALE_CODE_KEY }
       const domainLocale = getLocaleDomain(locales, req, options)
       finalLocale = domainLocale
     } else if (strategy !== STRATEGIES.NO_PREFIX) {

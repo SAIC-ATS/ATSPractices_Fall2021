@@ -8,9 +8,9 @@ const _71fc70b6 = () => interopDefault(import('../theme/src/pages/releases.vue' 
 const _036cb0d6 = () => interopDefault(import('../theme/src/pages/_.vue' /* webpackChunkName: "pages/_" */))
 
 // TODO: remove in Nuxt 3
-const emptyFn = () => { }
+const emptyFn = () => {}
 const originalPush = Router.prototype.push
-Router.prototype.push = function push(location, onComplete = emptyFn, onAbort) {
+Router.prototype.push = function push (location, onComplete = emptyFn, onAbort) {
   return originalPush.call(this, location, onComplete, onAbort)
 }
 
@@ -18,7 +18,7 @@ Vue.use(Router)
 
 export const routerOptions = {
   mode: 'history',
-  base: 'ATSPractices_Spring2021/',
+  base: '/',
   linkActiveClass: 'nuxt-link-active',
   linkExactActiveClass: 'nuxt-link-exact-active',
   scrollBehavior,
@@ -48,7 +48,7 @@ function decodeObj(obj) {
   }
 }
 
-export function createRouter() {
+export function createRouter () {
   const router = new Router(routerOptions)
 
   const resolve = router.resolve.bind(router)
