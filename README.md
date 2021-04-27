@@ -1,4 +1,4 @@
-# kristin
+# ATS Practices Spring 2021 Final Project Exhibition
 
 ## Setup
 
