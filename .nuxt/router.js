@@ -18,7 +18,7 @@ Vue.use(Router)
 
 export const routerOptions = {
   mode: 'history',
-  base: 'ATSPractices_Spring2021/',
+  base: 'ATSPractices_Spring2021yar/',
   linkActiveClass: 'nuxt-link-active',
   linkExactActiveClass: 'nuxt-link-exact-active',
   scrollBehavior,
