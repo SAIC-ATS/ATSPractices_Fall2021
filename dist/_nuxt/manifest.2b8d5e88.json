@@ -1,0 +1,11 @@
+{
+  "name": "spring2021",
+  "short_name": "spring2021",
+  "description": "## Setup",
+  "icons": [],
+  "start_url": "/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "a01a58",
+  "lang": "en"
+}
