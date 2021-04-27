@@ -3,6 +3,9 @@ import theme from "./theme";
 export default
   theme({
     target: "static",
+    router: {
+      base: '/ATSPractices_Spring2021/',
+    },
     content: {
       fullTextSearchFields: ['title', 'description', 'meta_data'],
     },

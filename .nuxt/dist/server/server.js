@@ -104,7 +104,7 @@ module.exports =
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/_nuxt/";
+/******/ 	__webpack_require__.p = "/ATSPractices_Spring2021/_nuxt/";
 /******/
 /******/ 	// uncaught error handler for webpack runtime
 /******/ 	__webpack_require__.oe = function(err) {
@@ -3334,7 +3334,7 @@ module.exports = require("defu");
 /* 24 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"title\":\"ats_practices_spring21\",\"meta\":[{\"hid\":\"charset\",\"charset\":\"utf-8\"},{\"hid\":\"viewport\",\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"},{\"hid\":\"mobile-web-app-capable\",\"name\":\"mobile-web-app-capable\",\"content\":\"yes\"},{\"hid\":\"apple-mobile-web-app-title\",\"name\":\"apple-mobile-web-app-title\",\"content\":\"ats_practices_spring21\"},{\"hid\":\"description\",\"name\":\"description\",\"content\":\"## Setup\"},{\"hid\":\"theme-color\",\"name\":\"theme-color\",\"content\":\"a01a58\"},{\"hid\":\"og:type\",\"name\":\"og:type\",\"property\":\"og:type\",\"content\":\"website\"},{\"hid\":\"og:title\",\"name\":\"og:title\",\"property\":\"og:title\",\"content\":\"ats_practices_spring21\"},{\"hid\":\"og:site_name\",\"name\":\"og:site_name\",\"property\":\"og:site_name\",\"content\":\"ats_practices_spring21\"},{\"hid\":\"og:description\",\"name\":\"og:description\",\"property\":\"og:description\",\"content\":\"## Setup\"}],\"link\":[{\"hid\":\"shortcut-icon\",\"rel\":\"shortcut icon\",\"href\":\"/_nuxt/icons/icon_64x64.058f9d.png\"},{\"hid\":\"apple-touch-icon\",\"rel\":\"apple-touch-icon\",\"href\":\"/_nuxt/icons/icon_512x512.058f9d.png\",\"sizes\":\"512x512\"},{\"rel\":\"manifest\",\"href\":\"/_nuxt/manifest.87f736a7.json\",\"hid\":\"manifest\"}],\"htmlAttrs\":{\"lang\":\"en\"}}");
+module.exports = JSON.parse("{\"title\":\"ats_practices_spring21\",\"meta\":[{\"hid\":\"charset\",\"charset\":\"utf-8\"},{\"hid\":\"viewport\",\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"},{\"hid\":\"mobile-web-app-capable\",\"name\":\"mobile-web-app-capable\",\"content\":\"yes\"},{\"hid\":\"apple-mobile-web-app-title\",\"name\":\"apple-mobile-web-app-title\",\"content\":\"ats_practices_spring21\"},{\"hid\":\"description\",\"name\":\"description\",\"content\":\"## Setup\"},{\"hid\":\"theme-color\",\"name\":\"theme-color\",\"content\":\"a01a58\"},{\"hid\":\"og:type\",\"name\":\"og:type\",\"property\":\"og:type\",\"content\":\"website\"},{\"hid\":\"og:title\",\"name\":\"og:title\",\"property\":\"og:title\",\"content\":\"ats_practices_spring21\"},{\"hid\":\"og:site_name\",\"name\":\"og:site_name\",\"property\":\"og:site_name\",\"content\":\"ats_practices_spring21\"},{\"hid\":\"og:description\",\"name\":\"og:description\",\"property\":\"og:description\",\"content\":\"## Setup\"}],\"link\":[{\"hid\":\"shortcut-icon\",\"rel\":\"shortcut icon\",\"href\":\"/ATSPractices_Spring2021/_nuxt/icons/icon_64x64.058f9d.png\"},{\"hid\":\"apple-touch-icon\",\"rel\":\"apple-touch-icon\",\"href\":\"/ATSPractices_Spring2021/_nuxt/icons/icon_512x512.058f9d.png\",\"sizes\":\"512x512\"},{\"rel\":\"manifest\",\"href\":\"/ATSPractices_Spring2021/_nuxt/manifest.ba8e84dc.json\",\"hid\":\"manifest\"}],\"htmlAttrs\":{\"lang\":\"en\"}}");
 
 /***/ }),
 /* 25 */
@@ -4589,7 +4589,7 @@ const emptyFn = () => {};
 external_vue_default.a.use(external_vue_router_default.a);
 const routerOptions = {
   mode: 'history',
-  base: '/',
+  base: '/ATSPractices_Spring2021/',
   linkActiveClass: 'nuxt-link-active',
   linkExactActiveClass: 'nuxt-link-exact-active',
   scrollBehavior: router_scrollBehavior,
@@ -7700,23 +7700,23 @@ var meta = __webpack_require__(24);
 // CONCATENATED MODULE: ./.nuxt/pwa/icon.plugin.js
 /* harmony default export */ var icon_plugin = (async function (ctx, inject) {
   const icons = {
-    "64x64": "/_nuxt/icons/icon_64x64.058f9d.png",
-    "120x120": "/_nuxt/icons/icon_120x120.058f9d.png",
-    "144x144": "/_nuxt/icons/icon_144x144.058f9d.png",
-    "152x152": "/_nuxt/icons/icon_152x152.058f9d.png",
-    "192x192": "/_nuxt/icons/icon_192x192.058f9d.png",
-    "384x384": "/_nuxt/icons/icon_384x384.058f9d.png",
-    "512x512": "/_nuxt/icons/icon_512x512.058f9d.png",
-    "ipad_1536x2048": "/_nuxt/icons/splash_ipad_1536x2048.058f9d.png",
-    "ipadpro9_1536x2048": "/_nuxt/icons/splash_ipadpro9_1536x2048.058f9d.png",
-    "ipadpro10_1668x2224": "/_nuxt/icons/splash_ipadpro10_1668x2224.058f9d.png",
-    "ipadpro12_2048x2732": "/_nuxt/icons/splash_ipadpro12_2048x2732.058f9d.png",
-    "iphonese_640x1136": "/_nuxt/icons/splash_iphonese_640x1136.058f9d.png",
-    "iphone6_50x1334": "/_nuxt/icons/splash_iphone6_50x1334.058f9d.png",
-    "iphoneplus_1080x1920": "/_nuxt/icons/splash_iphoneplus_1080x1920.058f9d.png",
-    "iphonex_1125x2436": "/_nuxt/icons/splash_iphonex_1125x2436.058f9d.png",
-    "iphonexr_828x1792": "/_nuxt/icons/splash_iphonexr_828x1792.058f9d.png",
-    "iphonexsmax_1242x2688": "/_nuxt/icons/splash_iphonexsmax_1242x2688.058f9d.png"
+    "64x64": "/ATSPractices_Spring2021/_nuxt/icons/icon_64x64.058f9d.png",
+    "120x120": "/ATSPractices_Spring2021/_nuxt/icons/icon_120x120.058f9d.png",
+    "144x144": "/ATSPractices_Spring2021/_nuxt/icons/icon_144x144.058f9d.png",
+    "152x152": "/ATSPractices_Spring2021/_nuxt/icons/icon_152x152.058f9d.png",
+    "192x192": "/ATSPractices_Spring2021/_nuxt/icons/icon_192x192.058f9d.png",
+    "384x384": "/ATSPractices_Spring2021/_nuxt/icons/icon_384x384.058f9d.png",
+    "512x512": "/ATSPractices_Spring2021/_nuxt/icons/icon_512x512.058f9d.png",
+    "ipad_1536x2048": "/ATSPractices_Spring2021/_nuxt/icons/splash_ipad_1536x2048.058f9d.png",
+    "ipadpro9_1536x2048": "/ATSPractices_Spring2021/_nuxt/icons/splash_ipadpro9_1536x2048.058f9d.png",
+    "ipadpro10_1668x2224": "/ATSPractices_Spring2021/_nuxt/icons/splash_ipadpro10_1668x2224.058f9d.png",
+    "ipadpro12_2048x2732": "/ATSPractices_Spring2021/_nuxt/icons/splash_ipadpro12_2048x2732.058f9d.png",
+    "iphonese_640x1136": "/ATSPractices_Spring2021/_nuxt/icons/splash_iphonese_640x1136.058f9d.png",
+    "iphone6_50x1334": "/ATSPractices_Spring2021/_nuxt/icons/splash_iphone6_50x1334.058f9d.png",
+    "iphoneplus_1080x1920": "/ATSPractices_Spring2021/_nuxt/icons/splash_iphoneplus_1080x1920.058f9d.png",
+    "iphonex_1125x2436": "/ATSPractices_Spring2021/_nuxt/icons/splash_iphonex_1125x2436.058f9d.png",
+    "iphonexr_828x1792": "/ATSPractices_Spring2021/_nuxt/icons/splash_iphonexr_828x1792.058f9d.png",
+    "iphonexsmax_1242x2688": "/ATSPractices_Spring2021/_nuxt/icons/splash_iphonexsmax_1242x2688.058f9d.png"
   };
 
   const getIcon = size => icons[size + 'x' + size] || '';
@@ -8283,7 +8283,7 @@ const createNext = ssrContext => opts => {
 
   let fullPath = Object(external_ufo_["withQuery"])(opts.path, opts.query);
   const $config = ssrContext.runtimeConfig || {};
-  const routerBase = $config._app && $config._app.basePath || '/';
+  const routerBase = $config._app && $config._app.basePath || '/ATSPractices_Spring2021/';
 
   if (!fullPath.startsWith('http') && routerBase !== '/' && !fullPath.startsWith(routerBase)) {
     fullPath = Object(external_ufo_["joinURL"])(routerBase, fullPath);
