@@ -3,21 +3,18 @@
     "name": "releases___en",
     "path": "/releases",
     "component": "/Users/kristinmcwharter/Documents/GitHub/ATSPractices_Spring2021/theme/src/pages/releases.vue",
-    "chunkName": "pages/releases",
-    "_name": "_71fc70b6"
+    "chunkName": "pages/releases"
   },
   {
     "name": "index___en",
     "path": "/",
     "component": "/Users/kristinmcwharter/Documents/GitHub/ATSPractices_Spring2021/theme/src/pages/_.vue",
-    "chunkName": "pages/_",
-    "_name": "_036cb0d6"
+    "chunkName": "pages/_"
   },
   {
     "name": "all___en",
     "path": "/*",
     "component": "/Users/kristinmcwharter/Documents/GitHub/ATSPractices_Spring2021/theme/src/pages/_.vue",
-    "chunkName": "pages/_",
-    "_name": "_036cb0d6"
+    "chunkName": "pages/_"
   }
 ]
