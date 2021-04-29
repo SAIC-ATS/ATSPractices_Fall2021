@@ -5735,12 +5735,7 @@ function wrapFunctional(options) {
 
 
 const components = {
-  Alert: () => __webpack_require__.e(/* import() | components/alert */ 2).then(__webpack_require__.bind(null, 90)).then(c => wrapFunctional(c.default || c)),
-  Badge: () => __webpack_require__.e(/* import() | components/badge */ 8).then(__webpack_require__.bind(null, 74)).then(c => wrapFunctional(c.default || c)),
-  CodeBlock: () => __webpack_require__.e(/* import() | components/code-block */ 11).then(__webpack_require__.bind(null, 91)).then(c => wrapFunctional(c.default || c)),
-  CodeGroup: () => __webpack_require__.e(/* import() | components/code-group */ 12).then(__webpack_require__.bind(null, 92)).then(c => wrapFunctional(c.default || c)),
-  CodeSandbox: () => __webpack_require__.e(/* import() | components/code-sandbox */ 13).then(__webpack_require__.bind(null, 93)).then(c => wrapFunctional(c.default || c)),
-  List: () => __webpack_require__.e(/* import() | components/list */ 25).then(__webpack_require__.bind(null, 94)).then(c => wrapFunctional(c.default || c)),
+  AppColorSwitcher: () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 18)).then(c => wrapFunctional(c.default || c)),
   BuiltWithNuxtDark: () => __webpack_require__.e(/* import() | components/built-with-nuxt-dark */ 9).then(__webpack_require__.bind(null, 99)).then(c => wrapFunctional(c.default || c)),
   BuiltWithNuxtLight: () => __webpack_require__.e(/* import() | components/built-with-nuxt-light */ 10).then(__webpack_require__.bind(null, 100)).then(c => wrapFunctional(c.default || c)),
   IconArrowLeft: () => __webpack_require__.e(/* import() | components/icon-arrow-left */ 15).then(__webpack_require__.bind(null, 59)).then(c => wrapFunctional(c.default || c)),
@@ -5762,7 +5757,12 @@ const components = {
   IconTwitter: () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 19)).then(c => wrapFunctional(c.default || c)),
   IconX: () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 48)).then(c => wrapFunctional(c.default || c)),
   IconXCircle: () => __webpack_require__.e(/* import() | components/icon-x-circle */ 24).then(__webpack_require__.bind(null, 105)).then(c => wrapFunctional(c.default || c)),
-  AppColorSwitcher: () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 18)).then(c => wrapFunctional(c.default || c)),
+  Alert: () => __webpack_require__.e(/* import() | components/alert */ 2).then(__webpack_require__.bind(null, 90)).then(c => wrapFunctional(c.default || c)),
+  Badge: () => __webpack_require__.e(/* import() | components/badge */ 8).then(__webpack_require__.bind(null, 74)).then(c => wrapFunctional(c.default || c)),
+  CodeBlock: () => __webpack_require__.e(/* import() | components/code-block */ 11).then(__webpack_require__.bind(null, 91)).then(c => wrapFunctional(c.default || c)),
+  CodeGroup: () => __webpack_require__.e(/* import() | components/code-group */ 12).then(__webpack_require__.bind(null, 92)).then(c => wrapFunctional(c.default || c)),
+  CodeSandbox: () => __webpack_require__.e(/* import() | components/code-sandbox */ 13).then(__webpack_require__.bind(null, 93)).then(c => wrapFunctional(c.default || c)),
+  List: () => __webpack_require__.e(/* import() | components/list */ 25).then(__webpack_require__.bind(null, 94)).then(c => wrapFunctional(c.default || c)),
   AppCopyButton: () => __webpack_require__.e(/* import() | components/app-copy-button */ 3).then(__webpack_require__.bind(null, 73)).then(c => wrapFunctional(c.default || c)),
   AppDropdown: () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 42)).then(c => wrapFunctional(c.default || c)),
   AppFooter: () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 45)).then(c => wrapFunctional(c.default || c)),
