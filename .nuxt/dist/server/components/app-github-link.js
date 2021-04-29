@@ -1,7 +1,7 @@
 exports.ids = [4,22];
 exports.modules = {
 
-/***/ 61:
+/***/ 63:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40,7 +40,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 62:
+/***/ 72:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -119,7 +119,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var AppGithubLink = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {IconExternalLink: __webpack_require__(61).default})
+installComponents(component, {IconExternalLink: __webpack_require__(63).default})
 
 
 /***/ })

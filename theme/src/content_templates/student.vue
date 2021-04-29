@@ -12,6 +12,7 @@
         '': settings.layout !== 'single',
       }"
     >
+      <!-- <AppPrevNext :prev="prev" :next="next" /> -->
       <!-- bg image -->
       <div class="fade w-full h-full">
         <iframe :src="document.url" class="w-full h-full"></iframe>
@@ -25,9 +26,6 @@
         <!-- This is the actual markdown body -->
         <NuxtContent class="mt-12 ml-12" :document="document" />
       </article>
-
-      <AppGithubLink :document="document" />
-      <AppPrevNext :prev="prev" :next="next" />
     </div>
 
     <AppToc v-if="!document.fullscreen" :toc="document.toc" />

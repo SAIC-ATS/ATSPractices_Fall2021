@@ -4,7 +4,7 @@
     :class="{ block: menu, hidden: !menu }"
   >
     <div
-      class="lg:sticky lg:top-16 overflow-y-auto h-full lg:h-auto lg:max-h-(screen-16)"
+      class="ml-16 lg:sticky lg:top-16 overflow-y-auto h-full lg:h-auto lg:max-h-(screen-16)"
     >
       <ul class="p-4 lg:py-8 lg:pl-0 lg:pr-8">
         <li v-if="!settings.algolia" class="mb-4 lg:hidden">

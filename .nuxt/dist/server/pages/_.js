@@ -1,7 +1,7 @@
 exports.ids = [28,3,19,20];
 exports.modules = {
 
-/***/ 64:
+/***/ 59:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40,7 +40,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 65:
+/***/ 60:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -79,7 +79,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 73:
+/***/ 71:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -157,7 +157,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var AppCopyButton = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {IconClipboardCheck: __webpack_require__(64).default,IconClipboardCopy: __webpack_require__(65).default})
+installComponents(component, {IconClipboardCheck: __webpack_require__(59).default,IconClipboardCopy: __webpack_require__(60).default})
 
 
 /***/ }),
@@ -184,7 +184,7 @@ var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
 var external_vuex_ = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./theme/src/components/app/AppCopyButton.vue + 4 modules
-var AppCopyButton = __webpack_require__(73);
+var AppCopyButton = __webpack_require__(71);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./theme/src/pages/_.vue?vue&type=script&lang=js&
 //

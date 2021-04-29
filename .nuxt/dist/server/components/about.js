@@ -109,7 +109,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 59:
+/***/ 61:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -148,7 +148,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 60:
+/***/ 62:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -187,7 +187,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 61:
+/***/ 63:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -226,7 +226,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 62:
+/***/ 72:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -305,12 +305,12 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var AppGithubLink = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {IconExternalLink: __webpack_require__(61).default})
+installComponents(component, {IconExternalLink: __webpack_require__(63).default})
 
 
 /***/ }),
 
-/***/ 63:
+/***/ 73:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -402,7 +402,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var AppPrevNext = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {IconArrowLeft: __webpack_require__(59).default,IconArrowRight: __webpack_require__(60).default})
+installComponents(component, {IconArrowLeft: __webpack_require__(61).default,IconArrowRight: __webpack_require__(62).default})
 
 
 /***/ }),
@@ -547,7 +547,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var about = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {Badge: __webpack_require__(74).default,AppGithubLink: __webpack_require__(62).default,AppPrevNext: __webpack_require__(63).default,AppToc: __webpack_require__(58).default})
+installComponents(component, {Badge: __webpack_require__(74).default,AppGithubLink: __webpack_require__(72).default,AppPrevNext: __webpack_require__(73).default,AppToc: __webpack_require__(58).default})
 
 
 /***/ })

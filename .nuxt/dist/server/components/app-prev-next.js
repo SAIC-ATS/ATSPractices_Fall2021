@@ -1,7 +1,7 @@
 exports.ids = [5,15,16];
 exports.modules = {
 
-/***/ 59:
+/***/ 61:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40,7 +40,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 60:
+/***/ 62:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -79,7 +79,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 63:
+/***/ 73:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -171,7 +171,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var AppPrevNext = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {IconArrowLeft: __webpack_require__(59).default,IconArrowRight: __webpack_require__(60).default})
+installComponents(component, {IconArrowLeft: __webpack_require__(61).default,IconArrowRight: __webpack_require__(62).default})
 
 
 /***/ })

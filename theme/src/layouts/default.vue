@@ -2,10 +2,9 @@
   <div class="pt-16">
     <AppHeader />
 
-    <main class="lg:px-12 container px-4 mx-auto">
+    <main class="lg: mx-auto">
       <div class="relative flex flex-wrap">
         <AppNav />
-
         <Nuxt class="lg:w-3/4 w-full" data="testing" />
       </div>
     </main>

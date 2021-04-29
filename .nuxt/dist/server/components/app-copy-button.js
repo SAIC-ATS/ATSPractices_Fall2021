@@ -1,7 +1,7 @@
 exports.ids = [3,19,20];
 exports.modules = {
 
-/***/ 64:
+/***/ 59:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40,7 +40,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 65:
+/***/ 60:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -79,7 +79,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 73:
+/***/ 71:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -157,7 +157,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var AppCopyButton = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {IconClipboardCheck: __webpack_require__(64).default,IconClipboardCopy: __webpack_require__(65).default})
+installComponents(component, {IconClipboardCheck: __webpack_require__(59).default,IconClipboardCopy: __webpack_require__(60).default})
 
 
 /***/ })
