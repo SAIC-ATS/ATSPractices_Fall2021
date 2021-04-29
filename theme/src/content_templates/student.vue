@@ -16,13 +16,13 @@
       <!-- bg image -->
       <div class="fade w-full h-full">
         <iframe :src="document.url" class="w-full h-full"></iframe>
+        <!-- Subtitle (if present) -->
+        <div v-if="document.website" class="mt-2">
+          <a :href="document.website" target="_blank">Learn More...</a>
+        </div>
       </div>
 
       <article class="dark:prose-dark max-w-none prose z-10">
-        <!-- Subtitle (if present) -->
-        <div v-if="document.website" class="-mt-16">
-          <a :href="document.website" target="_blank">Learn More...</a>
-        </div>
         <!-- This is the actual markdown body -->
         <NuxtContent class="mt-12 ml-12" :document="document" />
       </article>
