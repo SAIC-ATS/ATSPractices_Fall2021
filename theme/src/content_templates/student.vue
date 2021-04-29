@@ -6,7 +6,7 @@
     }"
   >
     <div
-      class="pt-8 lg:pb-4 dark:border-gray-800 w-full py-4"
+      class="lg:pb-4 dark:border-gray-800 w-full"
       :class="{
         'lg:w-full': !document.fullscreen,
         '': settings.layout !== 'single',
