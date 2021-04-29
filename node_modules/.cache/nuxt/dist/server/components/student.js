@@ -414,17 +414,17 @@ installComponents(component, {IconArrowLeft: __webpack_require__(59).default,Ico
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./theme/src/content_templates/student.vue?vue&type=template&id=6514a602&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./theme/src/content_templates/student.vue?vue&type=template&id=7c6723aa&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"flex flex-wrap-reverse h-screen",class:{
     'lg:-mx-8': _vm.settings.layout === 'single',
   }},[_vm._ssrNode("<div"+(_vm._ssrClass("pt-8 lg:pb-4 dark:border-gray-800 w-full py-4",{
       'lg:w-full': !_vm.document.fullscreen,
       '': _vm.settings.layout !== 'single',
-    }))+">","</div>",[_vm._ssrNode("<div class=\"fade w-full h-full\"><iframe"+(_vm._ssrAttr("src",_vm.document.url))+" class=\"w-full h-full\"></iframe></div> "),_vm._ssrNode("<article class=\"dark:prose-dark max-w-none prose z-10\">","</article>",[_vm._ssrNode(((_vm.document.website)?("<div class=\"-mt-4\"><a"+(_vm._ssrAttr("href",_vm.document.website))+" target=\"_blank\">Learn More...</a></div>"):"<!---->")+" "),_c('NuxtContent',{staticClass:"mt-12 ml-12",attrs:{"document":_vm.document}})],2),_vm._ssrNode(" "),_c('AppGithubLink',{attrs:{"document":_vm.document}}),_vm._ssrNode(" "),_c('AppPrevNext',{attrs:{"prev":_vm.prev,"next":_vm.next}})],2),_vm._ssrNode(" "),(!_vm.document.fullscreen)?_c('AppToc',{attrs:{"toc":_vm.document.toc}}):_vm._e()],2)}
+    }))+">","</div>",[_vm._ssrNode("<div class=\"fade w-full h-full\"><iframe"+(_vm._ssrAttr("src",_vm.document.url))+" class=\"w-full h-full\"></iframe></div> "),_vm._ssrNode("<article class=\"dark:prose-dark max-w-none prose z-10\">","</article>",[_vm._ssrNode(((_vm.document.website)?("<div class=\"-mt-16\"><a"+(_vm._ssrAttr("href",_vm.document.website))+" target=\"_blank\">Learn More...</a></div>"):"<!---->")+" "),_c('NuxtContent',{staticClass:"mt-12 ml-12",attrs:{"document":_vm.document}})],2),_vm._ssrNode(" "),_c('AppGithubLink',{attrs:{"document":_vm.document}}),_vm._ssrNode(" "),_c('AppPrevNext',{attrs:{"prev":_vm.prev,"next":_vm.next}})],2),_vm._ssrNode(" "),(!_vm.document.fullscreen)?_c('AppToc',{attrs:{"toc":_vm.document.toc}}):_vm._e()],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./theme/src/content_templates/student.vue?vue&type=template&id=6514a602&
+// CONCATENATED MODULE: ./theme/src/content_templates/student.vue?vue&type=template&id=7c6723aa&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./theme/src/content_templates/student.vue?vue&type=script&lang=js&
 //

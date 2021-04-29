@@ -19,7 +19,7 @@
 
       <article class="dark:prose-dark max-w-none prose z-10">
         <!-- Subtitle (if present) -->
-        <div v-if="document.website" class="-mt-4">
+        <div v-if="document.website" class="-mt-16">
           <a :href="document.website" target="_blank">Learn More...</a>
         </div>
         <!-- This is the actual markdown body -->
