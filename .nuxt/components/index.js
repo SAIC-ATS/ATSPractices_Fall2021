@@ -1,6 +1,5 @@
 import { wrapFunctional } from './utils'
 
-export { default as AppColorSwitcher } from '../../theme/src/components/global/app/AppColorSwitcher.vue'
 export { default as Alert } from '../../theme/src/components/global/base/Alert.vue'
 export { default as Badge } from '../../theme/src/components/global/base/Badge.vue'
 export { default as CodeBlock } from '../../theme/src/components/global/base/CodeBlock.vue'
@@ -28,6 +27,7 @@ export { default as IconTranslate } from '../../theme/src/components/global/icon
 export { default as IconTwitter } from '../../theme/src/components/global/icons/IconTwitter.vue'
 export { default as IconX } from '../../theme/src/components/global/icons/IconX.vue'
 export { default as IconXCircle } from '../../theme/src/components/global/icons/IconXCircle.vue'
+export { default as AppColorSwitcher } from '../../theme/src/components/global/app/AppColorSwitcher.vue'
 export { default as AppCopyButton } from '../../theme/src/components/app/AppCopyButton.vue'
 export { default as AppDropdown } from '../../theme/src/components/app/AppDropdown.vue'
 export { default as AppFooter } from '../../theme/src/components/app/AppFooter.vue'
@@ -43,7 +43,6 @@ export { default as About } from '../../theme/src/content_templates/about.vue'
 export { default as Home } from '../../theme/src/content_templates/home.vue'
 export { default as Student } from '../../theme/src/content_templates/student.vue'
 
-export const LazyAppColorSwitcher = import('../../theme/src/components/global/app/AppColorSwitcher.vue' /* webpackChunkName: "components/app-color-switcher" */).then(c => wrapFunctional(c.default || c))
 export const LazyAlert = import('../../theme/src/components/global/base/Alert.vue' /* webpackChunkName: "components/alert" */).then(c => wrapFunctional(c.default || c))
 export const LazyBadge = import('../../theme/src/components/global/base/Badge.vue' /* webpackChunkName: "components/badge" */).then(c => wrapFunctional(c.default || c))
 export const LazyCodeBlock = import('../../theme/src/components/global/base/CodeBlock.vue' /* webpackChunkName: "components/code-block" */).then(c => wrapFunctional(c.default || c))
@@ -71,6 +70,7 @@ export const LazyIconTranslate = import('../../theme/src/components/global/icons
 export const LazyIconTwitter = import('../../theme/src/components/global/icons/IconTwitter.vue' /* webpackChunkName: "components/icon-twitter" */).then(c => wrapFunctional(c.default || c))
 export const LazyIconX = import('../../theme/src/components/global/icons/IconX.vue' /* webpackChunkName: "components/icon-x" */).then(c => wrapFunctional(c.default || c))
 export const LazyIconXCircle = import('../../theme/src/components/global/icons/IconXCircle.vue' /* webpackChunkName: "components/icon-x-circle" */).then(c => wrapFunctional(c.default || c))
+export const LazyAppColorSwitcher = import('../../theme/src/components/global/app/AppColorSwitcher.vue' /* webpackChunkName: "components/app-color-switcher" */).then(c => wrapFunctional(c.default || c))
 export const LazyAppCopyButton = import('../../theme/src/components/app/AppCopyButton.vue' /* webpackChunkName: "components/app-copy-button" */).then(c => wrapFunctional(c.default || c))
 export const LazyAppDropdown = import('../../theme/src/components/app/AppDropdown.vue' /* webpackChunkName: "components/app-dropdown" */).then(c => wrapFunctional(c.default || c))
 export const LazyAppFooter = import('../../theme/src/components/app/AppFooter.vue' /* webpackChunkName: "components/app-footer" */).then(c => wrapFunctional(c.default || c))

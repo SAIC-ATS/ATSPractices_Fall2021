@@ -2,7 +2,6 @@ import Vue from 'vue'
 import { wrapFunctional } from './utils'
 
 const components = {
-  AppColorSwitcher: () => import('../../theme/src/components/global/app/AppColorSwitcher.vue' /* webpackChunkName: "components/app-color-switcher" */).then(c => wrapFunctional(c.default || c)),
   Alert: () => import('../../theme/src/components/global/base/Alert.vue' /* webpackChunkName: "components/alert" */).then(c => wrapFunctional(c.default || c)),
   Badge: () => import('../../theme/src/components/global/base/Badge.vue' /* webpackChunkName: "components/badge" */).then(c => wrapFunctional(c.default || c)),
   CodeBlock: () => import('../../theme/src/components/global/base/CodeBlock.vue' /* webpackChunkName: "components/code-block" */).then(c => wrapFunctional(c.default || c)),
@@ -30,6 +29,7 @@ const components = {
   IconTwitter: () => import('../../theme/src/components/global/icons/IconTwitter.vue' /* webpackChunkName: "components/icon-twitter" */).then(c => wrapFunctional(c.default || c)),
   IconX: () => import('../../theme/src/components/global/icons/IconX.vue' /* webpackChunkName: "components/icon-x" */).then(c => wrapFunctional(c.default || c)),
   IconXCircle: () => import('../../theme/src/components/global/icons/IconXCircle.vue' /* webpackChunkName: "components/icon-x-circle" */).then(c => wrapFunctional(c.default || c)),
+  AppColorSwitcher: () => import('../../theme/src/components/global/app/AppColorSwitcher.vue' /* webpackChunkName: "components/app-color-switcher" */).then(c => wrapFunctional(c.default || c)),
   AppCopyButton: () => import('../../theme/src/components/app/AppCopyButton.vue' /* webpackChunkName: "components/app-copy-button" */).then(c => wrapFunctional(c.default || c)),
   AppDropdown: () => import('../../theme/src/components/app/AppDropdown.vue' /* webpackChunkName: "components/app-dropdown" */).then(c => wrapFunctional(c.default || c)),
   AppFooter: () => import('../../theme/src/components/app/AppFooter.vue' /* webpackChunkName: "components/app-footer" */).then(c => wrapFunctional(c.default || c)),

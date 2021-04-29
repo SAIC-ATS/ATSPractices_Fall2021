@@ -59,17 +59,17 @@
     {
       "hid": "shortcut-icon",
       "rel": "shortcut icon",
-      "href": "/ATSPractices_Spring2021/_nuxt/icons/icon_64x64.058f9d.png"
+      "href": "/ATSPractices_Spring2021/_nuxt/icons/icon_64x64.ceac84.png"
     },
     {
       "hid": "apple-touch-icon",
       "rel": "apple-touch-icon",
-      "href": "/ATSPractices_Spring2021/_nuxt/icons/icon_512x512.058f9d.png",
+      "href": "/ATSPractices_Spring2021/_nuxt/icons/icon_512x512.ceac84.png",
       "sizes": "512x512"
     },
     {
       "rel": "manifest",
-      "href": "/ATSPractices_Spring2021/_nuxt/manifest.ba8e84dc.json",
+      "href": "/ATSPractices_Spring2021/_nuxt/manifest.d7c8faa6.json",
       "hid": "manifest"
     }
   ],
