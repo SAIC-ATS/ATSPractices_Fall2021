@@ -2,22 +2,22 @@
   {
     "name": "releases___en",
     "path": "/releases",
-    "component": "/Users/kristinmcwharter/Documents/GitHub/ATSPractices_Spring2021/theme/src/pages/releases.vue",
+    "component": "/home/galajo/ATSPractices_Fall2021/theme/src/pages/releases.vue",
     "chunkName": "pages/releases",
-    "_name": "_71fc70b6"
+    "_name": "_36d5b094"
   },
   {
     "name": "index___en",
     "path": "/",
-    "component": "/Users/kristinmcwharter/Documents/GitHub/ATSPractices_Spring2021/theme/src/pages/_.vue",
+    "component": "/home/galajo/ATSPractices_Fall2021/theme/src/pages/_.vue",
     "chunkName": "pages/_",
-    "_name": "_036cb0d6"
+    "_name": "_2fa33272"
   },
   {
     "name": "all___en",
     "path": "/*",
-    "component": "/Users/kristinmcwharter/Documents/GitHub/ATSPractices_Spring2021/theme/src/pages/_.vue",
+    "component": "/home/galajo/ATSPractices_Fall2021/theme/src/pages/_.vue",
     "chunkName": "pages/_",
-    "_name": "_036cb0d6"
+    "_name": "_2fa33272"
   }
 ]

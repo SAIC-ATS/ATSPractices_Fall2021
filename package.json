@@ -14,10 +14,12 @@
     "@nuxt/content-theme-docs": "^0.10.2",
     "cookie": "^0.4.0",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.15.4",
+    "nuxt": "^2.15.8",
     "nuxt-password-protect": "*",
     "push-dir": "^0.4.1",
-    "underscore": "^1.12.0"
+    "tailwind": "^4.0.0",
+    "underscore": "^1.12.0",
+    "vue-template-compiler": "^2.6.14"
   },
   "devDependencies": {
     "@nuxtjs/google-fonts": "^1.2.0",

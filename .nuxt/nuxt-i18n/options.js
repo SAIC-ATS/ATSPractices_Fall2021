@@ -18,7 +18,7 @@ export const options = {
   defaultLocaleRouteNameSuffix: "default",
   strategy: "prefix_except_default",
   lazy: true,
-  langDir: "/Users/kristinmcwharter/Documents/GitHub/ATSPractices_Spring2021/theme/src/i18n",
+  langDir: "/home/galajo/ATSPractices_Fall2021/theme/src/i18n",
   rootRedirect: null,
   detectBrowserLanguage: {"alwaysRedirect":false,"cookieCrossOrigin":false,"cookieDomain":null,"cookieKey":"i18n_redirected","cookieSecure":false,"fallbackLocale":"","onlyOnNoPrefix":false,"onlyOnRoot":false,"useCookie":true},
   differentDomains: false,
