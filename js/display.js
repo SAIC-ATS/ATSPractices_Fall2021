@@ -2,7 +2,7 @@ let projects = {
   about : "https://editor.p5js.org/gjohns13-spectacular/full/fhAKFBn-Y",
   yufei : "https://editor.p5js.org/YUFEIXIONG/full/1YzYNEvYp",
   arianna : "https://editor.p5js.org/adelat4/full/qdp5F0p5q",
-  kavan : "https://editor.p5js.org/adelat4/full/qdp5F0p5q",
+  kavan : "https://editor.p5js.org/kli17/full/AJnJjm6XQ",
   yazan : "https://editor.p5js.org/yalali/full/FVzXxgzwg",
   matt : "https://editor.p5js.org/mying/full/TCWZvA8e7",
   j : "https://tyruswrites.github.io/Chaos-Garden/",
