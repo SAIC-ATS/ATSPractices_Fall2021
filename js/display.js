@@ -11,7 +11,7 @@ let projects = {
   ben : "https://editor.p5js.org/bmiliu/full/CBuA9hLXx",
   susan : "https://editor.p5js.org/susan_huang/full/avMwz21W8",
   danny : "https://editor.p5js.org/ddowns1/full/FQkf848dt",
-  aaron : "https://editor.p5js.org/susan_huang/full/avMwz21W8",
+  aaron : "https://editor.p5js.org/gqu/full/pgB5EtpJ9",
   ryan : "https://editor.p5js.org/Youch/full/GzFXxVfJ6",
   xiaoxuan : "https://editor.p5js.org/xhan12/full/MRsioxKDE",
   aidan: "https://editor.p5js.org/afryli/full/smEPZhGzk",
